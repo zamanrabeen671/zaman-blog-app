@@ -1,19 +1,19 @@
 "use client";
 
-import Image from "next/image";
-import styles from "./writePage.module.css";
-import { useEffect, useState } from "react";
-import "react-quill/dist/quill.bubble.css";
-import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { app } from "@/utils/firebase";
 import {
+  getDownloadURL,
   getStorage,
   ref,
   uploadBytesResumable,
-  getDownloadURL,
 } from "firebase/storage";
-import { app } from "@/utils/firebase";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
+import "react-quill/dist/quill.bubble.css";
+import styles from "./writePage.module.css";
 
 const WritePage = () => {
   const { status } = useSession();
@@ -78,6 +78,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
+    console.log(media)
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({

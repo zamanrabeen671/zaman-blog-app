@@ -5,12 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE,
-  authDomain: "blog-cddc2.firebaseapp.com",
-  projectId: "blog-cddc2",
-  storageBucket: "blog-cddc2.appspot.com",
-  messagingSenderId: "413696194974",
-  appId: "1:413696194974:web:bc0a551cd5558bdf0dbe8f"
+  apiKey: "AIzaSyBCk-RbKtcTdYmStHY6TjxoSk_p2DIilN0",
+  authDomain: "zaman-dairy.firebaseapp.com",
+  projectId: "zaman-dairy",
+  storageBucket: "zaman-dairy.appspot.com",
+  messagingSenderId: "757154215044",
+  appId: "1:757154215044:web:5b82db78e07728d719bed1",
+  measurementId: "G-VHLPWDJSCQ"
 };
 
 // Initialize Firebase

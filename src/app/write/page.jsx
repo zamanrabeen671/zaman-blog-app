@@ -97,7 +97,9 @@ const WritePage = () => {
       router.push(`/posts/${data.slug}`);
     }
   };
-
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   return (
     <div className={styles.container}>
       <input
